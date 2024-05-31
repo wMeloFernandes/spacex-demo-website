@@ -25,6 +25,6 @@ export const ShipCard = ({ name, image, missions }: { name: string; image: strin
                 <span>See Details</span>
             </span>
         </div>
-        <ShipDetails enabled={modal} onClose={() => setModal(false)} missions={missions} />
+        <ShipDetails enabled={modal} onClose={() => setModal(false)} missions={missions} shipName={name} />
     </div>
 }
