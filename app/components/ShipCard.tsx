@@ -1,6 +1,7 @@
+import { CoreMission } from "@/util/types/graphql";
 import { LinkIcon } from "../icons/Link";
 
-export const ShipCard = ({ name, image, missions }: { name: string; image: string | null; missions: any[] }) => {
+export const ShipCard = ({ name, image, missions }: { name: string; image: string | null; missions: CoreMission[] }) => {
     const DEFAULT_IMAGE = 'https://www.fivebranches.edu/wp-content/uploads/2021/08/default-image.jpg'
 
     return <div className="flex gap-3 bg-white border border-gray-300 rounded-xl overflow-hidden items-center justify-start">
