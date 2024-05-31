@@ -20,7 +20,7 @@ export default function Home() {
   });
 
   return (
-    <main className="flex justify-center min-h-screen p-14">
+    <main className="flex justify-center min-h-screen p-14 bg-gradient-to-r from-purple-500 to-pink-500">
       <Spinner isLoading={loading} />
       {!loading && <div className="w-full max-w-7xl justify-between flex flex-col gap-2">
         {data?.ships?.map((ship) => (
