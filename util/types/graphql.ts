@@ -76,8 +76,8 @@ export type Core = {
 
 export type CoreMission = {
   __typename?: 'CoreMission';
-  flight?: Maybe<Scalars['Int']['output']>;
-  name?: Maybe<Scalars['String']['output']>;
+  id: Maybe<Scalars['Int']['output']>;
+  name: Maybe<Scalars['String']['output']>;
 };
 
 export type CoresFind = {
@@ -1340,7 +1340,7 @@ export type Uuid_Comparison_Exp = {
 export type ShipsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ShipsQuery = { __typename?: 'Query', ships?: Array<{ __typename?: 'Ship', id: string, image: string | null, name: string }> };
+export type ShipsQuery = { __typename?: 'Query', ships?: Array<{ __typename?: 'Ship', id: string, image: string | null, name: string, Missions: CoreMission[] }> };
 
 
 export const ShipsDocument = { "kind": "Document", "definitions": [{ "kind": "OperationDefinition", "operation": "query", "name": { "kind": "Name", "value": "ships" }, "selectionSet": { "kind": "SelectionSet", "selections": [{ "kind": "Field", "name": { "kind": "Name", "value": "ships" }, "selectionSet": { "kind": "SelectionSet", "selections": [{ "kind": "Field", "name": { "kind": "Name", "value": "id" } }, { "kind": "Field", "name": { "kind": "Name", "value": "class" } }, { "kind": "Field", "name": { "kind": "Name", "value": "name" } }] } }] } }] } as unknown as DocumentNode<ShipsQuery, ShipsQueryVariables>;
