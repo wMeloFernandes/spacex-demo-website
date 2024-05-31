@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 const ships = gql`
-  query ships {
-    ships {
+  query Ships($input: ShipsInput!) {
+    ships(input: $input) {
     id
     class
     name
