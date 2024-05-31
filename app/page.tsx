@@ -24,7 +24,7 @@ export default function Home() {
       <Spinner isLoading={loading} />
       {!loading && <div className="w-full max-w-7xl justify-between flex flex-col gap-2">
         {data?.ships?.map((ship) => (
-          <ShipCard key={ship.id} name={ship.name} missions={[]} image={ship.image}></ShipCard>
+          <ShipCard key={ship.id} name={ship.name} missions={ship?.Missions ?? []} image={ship.image}></ShipCard>
         ))}
       </div>}
     </main>
