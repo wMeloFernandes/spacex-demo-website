@@ -1,3 +1,5 @@
+import { LinkIcon } from "../icons/Link";
+
 export const ShipCard = ({ name, image, missions }: { name: string; image: string | null; missions: any[] }) => {
     const DEFAULT_IMAGE = 'https://www.fivebranches.edu/wp-content/uploads/2021/08/default-image.jpg'
 
@@ -10,8 +12,10 @@ export const ShipCard = ({ name, image, missions }: { name: string; image: strin
             <p className="text-gray-500">
                 Description
             </p>
-            <span className="text-gray-500 cursor-pointer hover:underline">
-                See Details
+            <span className="flex items-center justify-start text-gray-500 cursor-pointer hover:underline">
+                <LinkIcon className="h-4 w-4 mr-1" />
+
+                <span>See Details</span>
             </span>
         </div>
     </div>
