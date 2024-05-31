@@ -1,6 +1,6 @@
 export const ShipDetails = ({ enabled, onClose }: { enabled: boolean; onClose: () => void }) => {
     return enabled && <div className="relative z-10" role="dialog" aria-modal="true">
-        <div className="fixed inset-0 bg-gray-500/[.06]"></div>
+        <div className="fixed inset-0 bg-gray-500/70"></div>
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
