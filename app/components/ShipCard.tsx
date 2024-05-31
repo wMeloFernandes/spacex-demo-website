@@ -1,8 +1,12 @@
 import { CoreMission } from "@/util/types/graphql";
 import { LinkIcon } from "../icons/Link";
+import { ShipDetails } from "./ShipDetails";
+import { useState } from "react";
 
 export const ShipCard = ({ name, image, missions }: { name: string; image: string | null; missions: CoreMission[] }) => {
     const DEFAULT_IMAGE = 'https://www.fivebranches.edu/wp-content/uploads/2021/08/default-image.jpg'
+
+    const [modal, setModal] = useState(false)
 
     return <div className="flex gap-3 bg-white border border-gray-300 rounded-xl overflow-hidden items-center justify-start">
         <div className="relative w-32 h-32 flex-shrink-0">
@@ -13,11 +17,11 @@ export const ShipCard = ({ name, image, missions }: { name: string; image: strin
             <p className="text-gray-500">
                 {`${missions.length} mission${missions.length > 1 ? 's' : ''}`}
             </p>
-            <span className="flex items-center justify-start text-gray-500 cursor-pointer hover:underline">
+            <span className="flex items-center justify-start text-gray-500 cursor-pointer hover:underline" onClick={() => setModal(true)}>
                 <LinkIcon className="h-4 w-4 mr-1" />
-
                 <span>See Details</span>
             </span>
         </div>
+        <ShipDetails enabled={modal} onClose={() => setModal(false)} />
     </div>
 }

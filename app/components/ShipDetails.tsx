@@ -1,5 +1,5 @@
-export const ShipDetails = () => {
-    return <div className="relative z-10" role="dialog" aria-modal="true">
+export const ShipDetails = ({ enabled, onClose }: { enabled: boolean; onClose: () => void }) => {
+    return enabled && <div className="relative z-10" role="dialog" aria-modal="true">
         <div className="fixed inset-0 bg-gray-500/[.06]"></div>
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -16,7 +16,7 @@ export const ShipDetails = () => {
                         </div>
                     </div>
                     <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                        <button type="button" className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">OK</button>
+                        <button type="button" className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onClick={onClose}>OK</button>
                     </div>
                 </div>
             </div>
