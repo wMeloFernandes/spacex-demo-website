@@ -5,7 +5,11 @@ const ships = gql`
     ships(input: $input) {
     id
     name,
-    image
+    image,
+    Missions {
+      id,
+      name
+    }
     }
   }
 `;
